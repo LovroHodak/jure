@@ -1,16 +1,20 @@
 import { tw } from "./tailwind";
+import Banner from "./components/Banner";
+import Intro from "./components/Intro";
+import Products from "./components/Products";
 
 function App() {
   return (
-    <div className="font-bold">
-      <h1 className="underline">Jure</h1>
-      <Lovro className="text-red-500">Gantar</Lovro>
-    </div>
+    <MainContainer>
+      <Banner/>
+      <Intro/>
+      <Products />
+    </MainContainer>
   );
 }
 
-const Lovro = tw.div`
-text-8xl
+
+const MainContainer = tw.div`
 `
 
 export default App;
