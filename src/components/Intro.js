@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, forwardRef, useState, useEffect } from "react";
 import { tw } from "../tailwind";
 
-export default function Intro() {
+export default forwardRef(function Intro(_, ref) {
+  console.log(ref.current);
   return (
-    <IntroWrapper>
+    <IntroWrapper ref={ref}>
       <Title>Smo minimalisti</Title>
       <About>Radi imamo kratke besede. Na primer čin. In gin.</About>
       <About>
@@ -14,7 +15,7 @@ export default function Intro() {
       </About>
     </IntroWrapper>
   );
-}
+})
 
 const IntroWrapper = tw.section`
 p-20`;

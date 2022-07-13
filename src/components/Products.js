@@ -1,27 +1,30 @@
-import React from 'react'
+import React, { forwardRef } from "react";
 import { tw } from "../tailwind";
+import pubImg from "../pub-quiz-cover.png";
 
-export default function Products() {
+export default forwardRef(function Products(_, ref) {
   return (
-    <ProductsWrapper>
+    <ProductsWrapper ref={ref}>
       <Card>
-        <Image src='https://bratinovgin.com/wp-content/uploads/2020/04/Bratinov_Gin3-SM-1160x760.jpg'></Image>
+        <Image src={pubImg}></Image>
         <Content>
-          <Title>Bratinov Gin #3</Title>
+          <Title>PUB QUIZ v Gin & Juice</Title>
           <Info>
-            <SmallerTitle>London Dry</SmallerTitle>
-            <Text className="border-b-2">Destilirani gin</Text>
-            <Text>Stopnja alkohola: 44% vol, vsebina: 0.5L</Text>
+            <SmallerTitle>Soteska 8, 1000 Ljubljana</SmallerTitle>
+            <Text className="border-b-2">Sreda, 20.7.2022 ob 20h</Text>
+            <Text>Zberi ekipo 3-4 igralcev in pokaži svoje znanje!</Text>
+            <Text className='pt-0'> Število ekip je omejeno.</Text>
           </Info>
           <Basket>
-            <Price>25,00 €</Price>
+            <Price>20,00 € <span className="font-thin">(na ekipo)</span></Price>
             <Button>V KOSARICO</Button>
+            <iframe width="200px" height="200px" src="https://eventsframe.com/embed/m2Razwnio/tickets/" frameBorder="0"></iframe>
           </Basket>
         </Content>
       </Card>
 
       <Card>
-        <Image src='https://bratinovgin.com/wp-content/uploads/2020/04/Bratinov_Gin3-SM-1160x760.jpg'></Image>
+        <Image src="https://bratinovgin.com/wp-content/uploads/2020/04/Bratinov_Gin3-SM-1160x760.jpg"></Image>
         <Content>
           <Title>Bratinov Gin #3</Title>
           <Info>
@@ -36,37 +39,37 @@ export default function Products() {
         </Content>
       </Card>
     </ProductsWrapper>
-  )
-}
+  );
+});
 // 1
 const ProductsWrapper = tw.section`
 p-20 flex`;
 // 2
 const Card = tw.div`
-w-1/2 bg-yellow-100 m-2`
+w-1/2 bg-yellow-100 m-2`;
 // 3
-const Image = tw.img``
+const Image = tw.img``;
 // 3
 const Content = tw.div`
-flex flex-col items-center`
+flex flex-col items-center`;
 // 4
 const Title = tw.h2`
-text-xl font-bold mt-2`
+text-xl font-bold mt-2`;
 // 4
 const Info = tw.div`
-flex flex-col items-center`
+flex flex-col items-center`;
 // 5
 const SmallerTitle = tw.h3`
-`
+`;
 // 5
 const Text = tw.p`
-p-4 font-thin`
+p-4 font-thin`;
 // 4
 const Basket = tw.div`
-flex flex-col items-center`
+flex flex-col items-center`;
 // 5
 const Price = tw.p`
-border-b-2 border-t-2 text-center font-bold p-2`
+border-b-2 border-t-2 text-center font-bold p-2`;
 // 5
 const Button = tw.button`
-m-2 px-16 py-2 bg-orange-500 hover:bg-orange-700`
+m-2 px-16 py-2 bg-orange-500 hover:bg-orange-700`;

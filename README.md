@@ -37,6 +37,26 @@ export const tw = new Proxy(
   }
 );
 
+<!-- IF USING FORWARD REF -->
+import React, { forwardRef } from "react";
+
+// settings for being able to use refrences and classes on tailwind components
+export const tw = new Proxy(
+  {},
+  {
+    get(_, el) {
+      const El = el;
+      return ([classString]) =>
+        forwardRef(({ children, className, ...props }, ref) =>
+          (
+            <El ref={ref} {...props} className={`${classString} ${className}`}>
+              {children}
+            </El>
+          ));
+    },
+  }
+);
+
 6. ctrl + shift + p (workspace settings(JSON))
 
 {
@@ -54,3 +74,9 @@ export const tw = new Proxy(
     ]
   }
 
+
+
+7. npm i bootstrap-icons
+
+8. //index.js
+import 'bootstrap-icons/font/bootstrap-icons.css';
