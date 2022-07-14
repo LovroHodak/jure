@@ -1,11 +1,11 @@
-import React, { useRef, forwardRef, useState, useEffect } from "react";
+import React, { forwardRef } from "react";
 import { tw } from "../tailwind";
 
 export default forwardRef(function Intro(_, ref) {
   console.log(ref.current);
   return (
-    <IntroWrapper ref={ref}>
-      <Title>Smo minimalisti</Title>
+    <IntroWrapper >
+      <Title ref={ref}>Smo minimalisti</Title>
       <About>Radi imamo kratke besede. Na primer čin. In gin.</About>
       <About>
         Za svoje delo ne potrebujemo veliko prostora. Naša destilarna je ravno
