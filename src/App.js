@@ -25,6 +25,7 @@ function App() {
 }
 
 const MainContainer = tw.div`
+max-w-screen-xl m-auto border-2 border-white
 `;
 
 export default App;

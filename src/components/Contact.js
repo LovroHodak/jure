@@ -7,8 +7,8 @@ export default forwardRef(function Contact(_, ref) {
     <ContactCont ref={ref}>
       <Title>Kontakt</Title>
       <div className="flex">
-        <div class="w-full md:w-96 md:max-w-full mx-auto bg-white">
-          <div class="p-6 border border-gray-300 sm:rounded-md">
+        <div class="w-full bg-white">
+          <div class="p-6 border border-gray-300">
             <form method="POST" action="https://herotofu.com/start">
               <label class="block mb-6">
                 <span class="text-gray-700">Your name</span>
@@ -93,7 +93,7 @@ export default forwardRef(function Contact(_, ref) {
           </div>
         </div>
 
-        <div className="bg-black w-1/2 flex items-center">
+        <div className="bg-black w-1/2 md:flex items-center hidden border-2 border-white">
           <img src={pubImg} />
         </div>
       </div>
@@ -102,7 +102,7 @@ export default forwardRef(function Contact(_, ref) {
 });
 
 const ContactCont = tw.div`
-bg-black w-full  p-4
+bg-black w-full p-10 md:p-20
 `;
 
 const Title = tw.h1`

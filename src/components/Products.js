@@ -48,7 +48,7 @@ export default forwardRef(function Products(_, ref) {
 });
 // 1
 const ProductsWrapper = tw.section`
-px-20 pb-20`;
+px-10 md:px-20 pb-20 bg-white`;
 // 2
 const Card = tw.div`
 w-1/2 bg-yellow-100 m-2`;

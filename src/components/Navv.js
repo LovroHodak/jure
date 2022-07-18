@@ -8,10 +8,10 @@ export default function Navv({ introRef, productsRef, contactRef }) {
     console.log(introRef.current.offsetTop);
   }, []); */
   return (
-    <div>
-      <nav className="bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div className="px-10 md:px-20">
+      <nav className="bg-transparent mb-8 border-gray-200 pt-8 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <span className="self-center text-white text-3xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-white text-4xl font-semibold whitespace-nowrap dark:text-white">
             PubQuiz.si
           </span>
           <button
@@ -59,14 +59,14 @@ export default function Navv({ introRef, productsRef, contactRef }) {
             } w-full md:block md:w-auto`}
             id="mobile-menu"
           >
-            <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 text-xl md:font-medium">
+            <ul className="top-40 flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 text-xl md:font-medium">
               <li
                 onClick={() => {
                   introRef.current.scrollIntoView({ behavior: "smooth" });
                   setToggleMenu(false);
                 }}
               >
-                <a className="cursor-pointer block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 only:md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <a className="cursor-pointer text-2xl block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 only:md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                   O nas
                 </a>
               </li>
@@ -76,7 +76,7 @@ export default function Navv({ introRef, productsRef, contactRef }) {
                   setToggleMenu(false);
                 }}
               >
-                <a className="cursor-pointer block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 only:md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <a className="cursor-pointer text-2xl block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 only:md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                   Dogodki
                 </a>
               </li>
@@ -86,7 +86,7 @@ export default function Navv({ introRef, productsRef, contactRef }) {
                   setToggleMenu(false);
                 }}
               >
-                <a className="cursor-pointer block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 only:md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <a className="cursor-pointer text-2xl block py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 only:md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                   Kontakt
                 </a>
               </li>

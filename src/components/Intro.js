@@ -18,7 +18,7 @@ export default forwardRef(function Intro(_, ref) {
 })
 
 const IntroWrapper = tw.section`
-p-20`;
+p-10 md:p-20 bg-white`;
 
 const Title = tw.h1`
 text-4xl font-bold mt-5 mb-5 text-center`;
