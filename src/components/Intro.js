@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import { tw } from "../tailwind";
 
 export default forwardRef(function Intro(_, ref) {
-  console.log(ref.current);
+  //console.log(ref.current);
   return (
     <IntroWrapper >
       <Title ref={ref}>Smo minimalisti</Title>
@@ -21,7 +21,7 @@ const IntroWrapper = tw.section`
 p-10 md:p-20 bg-white`;
 
 const Title = tw.h1`
-text-4xl font-bold mt-5 mb-5 text-center`;
+text-4xl font-bold mb-16 text-center`;
 
 const About = tw.p`
-text-xl font-thin mt-3 mb-3 text-center`;
+text-xl font-thin my-5 text-center`;

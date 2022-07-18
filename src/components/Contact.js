@@ -7,15 +7,15 @@ export default forwardRef(function Contact(_, ref) {
     <ContactCont ref={ref}>
       <Title>Kontakt</Title>
       <div className="flex">
-        <div class="w-full bg-white">
-          <div class="p-6 border border-gray-300">
+        <div className="w-full bg-white">
+          <div className="p-6 border border-gray-300">
             <form method="POST" action="https://herotofu.com/start">
-              <label class="block mb-6">
-                <span class="text-gray-700">Your name</span>
+              <label className="block mb-6">
+                <span className="text-gray-700">Your name</span>
                 <input
                   type="text"
                   name="name"
-                  class="
+                  className="
             block
             w-full
             mt-1
@@ -30,12 +30,12 @@ export default forwardRef(function Contact(_, ref) {
                   placeholder="Joe Bloggs"
                 />
               </label>
-              <label class="block mb-6">
-                <span class="text-gray-700">Email address</span>
+              <label className="block mb-6">
+                <span className="text-gray-700">Email address</span>
                 <input
                   name="email"
                   type="email"
-                  class="
+                  className="
             block
             w-full
             mt-1
@@ -51,11 +51,11 @@ export default forwardRef(function Contact(_, ref) {
                   required
                 />
               </label>
-              <label class="block mb-6">
-                <span class="text-gray-700">Message</span>
+              <label className="block mb-6">
+                <span className="text-gray-700">Message</span>
                 <textarea
                   name="message"
-                  class="
+                  className="
             block
             w-full
             mt-1
@@ -71,10 +71,10 @@ export default forwardRef(function Contact(_, ref) {
                   placeholder="Tell us what you're thinking about..."
                 ></textarea>
               </label>
-              <div class="mb-6">
+              <div className="mb-6">
                 <button
                   type="submit"
-                  class="
+                  className="
             h-10
             px-5
             text-indigo-100
@@ -106,4 +106,4 @@ bg-black w-full p-10 md:p-20
 `;
 
 const Title = tw.h1`
-text-4xl font-bold mb-10 text-center text-white`;
+text-4xl font-bold mb-16 text-center text-white`;

@@ -1,24 +1,43 @@
 import React, { useRef } from "react";
 import { tw } from "./tailwind";
 import Banner from "./components/Banner";
-import Intro from "./components/Intro";
-import Products from "./components/Products";
-import Contact from "./components/Contact";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
+import { Switch, Route, withRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import PogojiPoslovanja from "./pages/PogojiPoslovanja";
 
 function App() {
   const introRef = useRef();
   const productsRef = useRef();
   const contactRef = useRef();
 
+  let refs = [introRef, productsRef, contactRef];
+
   return (
     <MainContainer>
       {/* to NAVBAR refrences are sent as Props */}
-      <Banner introRef={introRef} productsRef={productsRef} contactRef={contactRef} />
+      <Banner
+        introRef={introRef}
+        productsRef={productsRef}
+        contactRef={contactRef}
+      />
       {/* to Components refrences are sent as Refs */}
-      <Intro ref={introRef} />
-      <Products ref={productsRef} />
-      <Contact ref={contactRef} />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return <Home ref={refs} />;
+          }}
+        />
+        <Route
+          exact
+          path="/pogoji"
+          render={() => {
+            return <PogojiPoslovanja />;
+          }}
+        />
+      </Switch>
       <Footer />
     </MainContainer>
   );
@@ -28,4 +47,4 @@ const MainContainer = tw.div`
 max-w-screen-xl m-auto border-2 border-white
 `;
 
-export default App;
+export default withRouter(App);
