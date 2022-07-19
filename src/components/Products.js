@@ -2,72 +2,118 @@ import React, { forwardRef } from "react";
 import { tw } from "../tailwind";
 import pubImg from "../pub-quiz-cover.png";
 
+let events = [
+  {
+    image: "https://activecollab.com/upload/blog/301/cover.png",
+    title: "PUB QUIZ v Gin & Juice",
+    place: "Soteska 8, 1000 Ljubljana",
+    when: "Sreda, 20.7.2022 ob 20h",
+    players: "Zberi ekipo 3-4 igralcev in pokaži svoje znanje!",
+    ekipe: "Število ekip je omejeno.",
+    price: 20,
+    link: "https://eventsframe.com/e/qIYKIswi4/pub-quiz-gin-juice/tickets",
+  },
+  {
+    image: "https://activecollab.com/upload/blog/301/cover.png",
+    title: "PUB QUIZ v Gin & Juice",
+    place: "Soteska 8, 1000 Ljubljana",
+    when: "Sreda, 20.7.2022 ob 20h",
+    players: "Zberi ekipo 3-4 igralcev in pokaži svoje znanje!",
+    ekipe: "Število ekip je omejeno.",
+    price: 20,
+    link: "https://eventsframe.com/e/qIYKIswi4/pub-quiz-gin-juice/tickets",
+  },
+  {
+    image: "https://activecollab.com/upload/blog/301/cover.png",
+    title: "PUB QUIZ v Gin & Juice",
+    place: "Soteska 8, 1000 Ljubljana",
+    when: "Sreda, 20.7.2022 ob 20h",
+    players: "Zberi ekipo 3-4 igralcev in pokaži svoje znanje!",
+    ekipe: "Število ekip je omejeno.",
+    price: 20,
+    link: "https://eventsframe.com/e/qIYKIswi4/pub-quiz-gin-juice/tickets",
+  },
+];
+
 export default forwardRef(function Products(_, ref) {
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
+      <div className="flex flex-wrap justify-evenly">
+        <div>
+          <iframe
+            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div>
+          <iframe
+            scrolling="no"
+            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div>
+          <iframe
+            scrolling="no"
+            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div>
+          <iframe
+            scrolling="no"
+            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div>
+          <iframe
+            scrolling="no"
+            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* <iframe width="100%" height='1200px' src="https://eventsframe.com/embed/oaWtFlGY8/tickets/" frameborder="0"></iframe>
       <CardsCont>
-        <Card>
-          <Image src={pubImg}></Image>
-          <Content>
-            <Title>PUB QUIZ v Gin & Juice</Title>
-            <Info>
-              <SmallerTitle>Soteska 8, 1000 Ljubljana</SmallerTitle>
-              <Text className="border-b-2">Sreda, 20.7.2022 ob 20h</Text>
-              <Text>Zberi ekipo 3-4 igralcev in pokaži svoje znanje!</Text>
-              <Text className="pt-0"> Število ekip je omejeno.</Text>
-            </Info>
-            <Basket>
-              <Price>
-                20,00 € <span className="font-thin">(ekipa)</span>
-              </Price>
-              <Button>V KOSARICO</Button>
-              {/* <iframe width="200px" height="200px" src="https://eventsframe.com/embed/m2Razwnio/tickets/" frameBorder="0"></iframe> */}
-            </Basket>
-          </Content>
-        </Card>
-
-        <Card>
-          <Image src={pubImg}></Image>
-          <Content>
-            <Title>PUB QUIZ v Gin & Juice</Title>
-            <Info>
-              <SmallerTitle>Soteska 8, 1000 Ljubljana</SmallerTitle>
-              <Text className="border-b-2">Sreda, 20.7.2022 ob 20h</Text>
-              <Text>Zberi ekipo 3-4 igralcev in pokaži svoje znanje!</Text>
-              <Text className="pt-0"> Število ekip je omejeno.</Text>
-            </Info>
-            <Basket>
-              <Price>
-                20,00 € <span className="font-thin">(ekipa)</span>
-              </Price>
-              <Button>V KOSARICO</Button>
-              {/* <iframe width="200px" height="200px" src="https://eventsframe.com/embed/m2Razwnio/tickets/" frameBorder="0"></iframe> */}
-            </Basket>
-          </Content>
-        </Card>
-
-        <Card>
-          <Image src={pubImg}></Image>
-          <Content>
-            <Title>PUB QUIZ v Gin & Juice</Title>
-            <Info>
-              <SmallerTitle>Soteska 8, 1000 Ljubljana</SmallerTitle>
-              <Text className="border-b-2">Sreda, 20.7.2022 ob 20h</Text>
-              <Text>Zberi ekipo 3-4 igralcev in pokaži svoje znanje!</Text>
-              <Text className="pt-0"> Število ekip je omejeno.</Text>
-            </Info>
-            <Basket>
-              <Price>
-                20,00 € <span className="font-thin">(ekipa)</span>
-              </Price>
-              <Button>V KOSARICO</Button>
-              {/* <iframe width="200px" height="200px" src="https://eventsframe.com/embed/m2Razwnio/tickets/" frameBorder="0"></iframe> */}
-            </Basket>
-          </Content>
-        </Card>
-
-      </CardsCont>
+        {events.map((party, i) => {
+          return (
+            <Card key={i}>
+              <Image src={party.image}></Image>
+              <Content>
+                <Title>{party.title}</Title>
+                <Info>
+                  <SmallerTitle>{party.place}</SmallerTitle>
+                  <Text className="border-b-2">{party.when}</Text>
+                  <Text>{party.players}</Text>
+                  <Text className="pt-0">{party.ekipe}</Text>
+                </Info>
+                <Basket>
+                  <Price>
+                  {party.price} € <span className="font-thin">(ekipa)</span>
+                  </Price>
+                  <Button>
+                    <a
+                      target="blank"
+                      href={party.link}
+                    >
+                      V KOSARICO
+                    </a>
+                  </Button>
+                  <iframe width="100%" height='1200px' src="https://eventsframe.com/embed/oaWtFlGY8/tickets/" frameborder="0"></iframe>
+                </Basket>
+              </Content>
+            </Card>
+          );
+        })}
+      </CardsCont> */}
     </ProductsWrapper>
   );
 });
@@ -77,7 +123,7 @@ p-10 md:p-20 bg-white mt-10`;
 
 const CardsCont = tw.div`
 grid md:grid-cols-2 justify-center gap-4
-`
+`;
 const Card = tw.div`
 max-w-lg bg-yellow-100 m-2`;
 

@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { Switch, Route, withRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import PogojiPoslovanja from "./pages/PogojiPoslovanja";
+import Admin from "./pages/Admin";
 
 function App() {
   const introRef = useRef();
@@ -35,6 +36,13 @@ function App() {
           path="/pogoji"
           render={() => {
             return <PogojiPoslovanja />;
+          }}
+        />
+        <Route
+          exact
+          path="/admin"
+          render={() => {
+            return <Admin />;
           }}
         />
       </Switch>
