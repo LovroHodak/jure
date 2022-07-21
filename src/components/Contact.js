@@ -1,13 +1,14 @@
 import React, { forwardRef } from "react";
 import { tw } from "../tailwind";
 import pubImg from "../pub-quiz-cover.png";
+import { Widget } from "@typeform/embed-react";
 
 export default forwardRef(function Contact(_, ref) {
   return (
     <ContactCont ref={ref}>
       <Title>Kontakt</Title>
       <div className="flex">
-        <div className="w-full bg-white">
+        {/* <div className="w-full bg-white">
           <div className="p-6 border border-gray-300">
             <form method="POST" action="https://herotofu.com/start">
               <label className="block mb-6">
@@ -91,8 +92,8 @@ export default forwardRef(function Contact(_, ref) {
               </div>
             </form>
           </div>
-        </div>
-
+        </div> */}
+        <Widget id="ckaRnJMj" className="h-[400px]" />
         <div className="bg-black w-1/2 md:flex items-center hidden border-2 border-white">
           <img src={pubImg} />
         </div>
