@@ -26,18 +26,14 @@ collections:
           - name: events
             label: 'Events'
             widget: list
-            fields: 
-              - label: Event
-                name: event
-                widget: object
-                fields: 
-                  - label: 'Iframe Url'
-                    name: iframeUrl
-                    widget: string
-                  - label: 'Date'
-                    name: date
-                    widget: datetime
-                  - label: 'Name'
-                    name: name
-                    widget: string
+            fields:  
+              - label: 'Iframe Url'
+                name: iframeUrl
+                widget: string
+              - label: 'Date'
+                name: date
+                widget: datetime
+              - label: 'Name'
+                name: name
+                widget: string
             
