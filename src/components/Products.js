@@ -1,86 +1,26 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { tw } from "../tailwind";
-import pubImg from "../pub-quiz-cover.png";
-
-let events = [
-  {
-    image: "https://activecollab.com/upload/blog/301/cover.png",
-    title: "PUB QUIZ v Gin & Juice",
-    place: "Soteska 8, 1000 Ljubljana",
-    when: "Sreda, 20.7.2022 ob 20h",
-    players: "Zberi ekipo 3-4 igralcev in pokaži svoje znanje!",
-    ekipe: "Število ekip je omejeno.",
-    price: 20,
-    link: "https://eventsframe.com/e/qIYKIswi4/pub-quiz-gin-juice/tickets",
-  },
-  {
-    image: "https://activecollab.com/upload/blog/301/cover.png",
-    title: "PUB QUIZ v Gin & Juice",
-    place: "Soteska 8, 1000 Ljubljana",
-    when: "Sreda, 20.7.2022 ob 20h",
-    players: "Zberi ekipo 3-4 igralcev in pokaži svoje znanje!",
-    ekipe: "Število ekip je omejeno.",
-    price: 20,
-    link: "https://eventsframe.com/e/qIYKIswi4/pub-quiz-gin-juice/tickets",
-  },
-  {
-    image: "https://activecollab.com/upload/blog/301/cover.png",
-    title: "PUB QUIZ v Gin & Juice",
-    place: "Soteska 8, 1000 Ljubljana",
-    when: "Sreda, 20.7.2022 ob 20h",
-    players: "Zberi ekipo 3-4 igralcev in pokaži svoje znanje!",
-    ekipe: "Število ekip je omejeno.",
-    price: 20,
-    link: "https://eventsframe.com/e/qIYKIswi4/pub-quiz-gin-juice/tickets",
-  },
-];
+import eventsFile from "../content/events.json";
 
 export default forwardRef(function Products(_, ref) {
+  console.log(eventsFile);
 
-  
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
       <div className="flex flex-wrap justify-evenly">
-        <div>
-          <iframe
-          scrolling="no"
-            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
-            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
-            frameborder="0"
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
-            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
-            frameborder="0"
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            scrolling="no"
-            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
-            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
-            frameborder="0"
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            scrolling="no"
-            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
-            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
-            frameborder="0"
-          ></iframe>
-        </div>
-        <div>
-          <iframe
-            scrolling="no"
-            className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
-            src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
-            frameborder="0"
-          ></iframe>
-        </div>
+        {eventsFile.events.map((event, i) => {
+          return (
+            <div key={i}>
+              <iframe
+                scrolling="no"
+                className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+                src={event.iframeUrl}
+                frameborder="0"
+              ></iframe>
+            </div>
+          );
+        })}
       </div>
 
       {/* <iframe width="100%" height='1200px' src="https://eventsframe.com/embed/oaWtFlGY8/tickets/" frameborder="0"></iframe>
