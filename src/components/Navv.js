@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import meta from '../content/meta.json'
 
 export default function Navv({ introRef, productsRef, contactRef }) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -9,7 +10,7 @@ export default function Navv({ introRef, productsRef, contactRef }) {
       <nav className="bg-transparent mb-8 border-gray-200 pt-8 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <span className="self-center hover:text-gray-400 text-white text-4xl font-semibold whitespace-nowrap dark:text-white">
-            <Link to="/">PubQuiz.si</Link>
+            <Link to="/">{meta.title}</Link>
           </span>
           <button
             data-collapse-toggle="mobile-menu"
