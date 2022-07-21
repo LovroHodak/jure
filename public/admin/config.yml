@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: LovroHodak/jure
+  branch: main
   #change the name of repo to yours
 
 media_folder: "public/images"
@@ -14,7 +15,7 @@ collections:
         name: meta
         label: 'Meta'
         fields:
-          - name: short_name
-            label: 'Short Name'
+          - name: title
+            label: 'Title'
             widget: string
             required: true
