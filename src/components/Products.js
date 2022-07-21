@@ -8,7 +8,7 @@ export default forwardRef(function Products(_, ref) {
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
-      <div className="flex flex-wrap justify-evenly">
+      <div className="flex flex-wrap justify-evenly" id='dogodki'>
         {eventsFile.events.map((event, i) => {
           return (
             <div key={i}>
