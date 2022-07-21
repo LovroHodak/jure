@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { tw } from "../tailwind";
 import pubImg from "../pub-quiz-cover.png";
 
@@ -36,12 +36,15 @@ let events = [
 ];
 
 export default forwardRef(function Products(_, ref) {
+
+  
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
       <div className="flex flex-wrap justify-evenly">
         <div>
           <iframe
+          scrolling="no"
             className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
             src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
             frameborder="0"
@@ -49,7 +52,6 @@ export default forwardRef(function Products(_, ref) {
         </div>
         <div>
           <iframe
-            scrolling="no"
             className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
             src="https://eventsframe.com/embed/oaWtFlGY8/tickets/"
             frameborder="0"
