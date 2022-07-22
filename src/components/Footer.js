@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { tw } from "../tailwind";
 
-export default function Footer() {
+export default function Footer({ pogojiRef }) {
   return (
     <FooterContainer>
       <div className="md:w-1/2 mt-8 md:mt-0">
         <Title>PubQuiz.si</Title>
         <ul>
-          <li className="py-1">Pubqiuz s.p.</li>
-          <li className="py-1">Juretov naslov 16</li>
-          <li className="py-1">5800 Ajdovscina</li>
+          <li className="py-1">jure s.p.</li>
+          <li className="py-1">Juretov naslov 32</li>
+          <li className="py-1">5270 Ajdovscina</li>
           <li className="py-1">Slovenija</li>
           <li className="py-1 underline">jurega@gmail.com</li>
           <li className="mt-2">
@@ -25,8 +25,15 @@ export default function Footer() {
       </div>
       <div className="md:w-1/2">
         <Title>Bliznjice:</Title>
-        <p className="py-2 font-bold hover:text-gray-400 cursor-pointer">
-          <Link to="/pogoji">- POGOJI POSLOVANJA</Link>
+        <p
+          className="py-2 font-bold hover:text-gray-400 cursor-pointer"
+          onClick={() => {
+            setTimeout(() => {
+              pogojiRef.current.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          }}
+        >
+          <Link to="/pogoji#pogoji">- POGOJI POSLOVANJA</Link>
         </p>
         <p className="py-2 font-bold hover:text-gray-400 cursor-pointer">
           - VARSTVO OSEBNIH PODATKOV

@@ -7,7 +7,7 @@ export default forwardRef(function Contact(_, ref) {
   return (
     <ContactCont ref={ref}>
       <Title>Kontakt</Title>
-      <div className="flex">
+      <div className="flex" id='kontakt'>
         {/* <div className="w-full bg-white">
           <div className="p-6 border border-gray-300">
             <form method="POST" action="https://herotofu.com/start">
@@ -93,8 +93,8 @@ export default forwardRef(function Contact(_, ref) {
             </form>
           </div>
         </div> */}
-        <Widget id="ckaRnJMj" className="h-[400px]" />
-        <div className="bg-black w-1/2 md:flex items-center hidden border-2 border-white">
+        <Widget id="ckaRnJMj" className="h-[400px] w-full md:w-1/2" />
+        <div className="bg-black w-1/2 md:flex items-center hidden border-2 border-white rounded-lg">
           <img src={pubImg} />
         </div>
       </div>

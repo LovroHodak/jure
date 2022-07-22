@@ -5,12 +5,14 @@ import Footer from "./components/Footer";
 import { Switch, Route, withRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import PogojiPoslovanja from "./pages/PogojiPoslovanja";
-import Admin from "./pages/Admin";
+import Admin from "./unused/Admin";
 
 function App() {
   const introRef = useRef();
   const productsRef = useRef();
   const contactRef = useRef();
+  
+  const pogojiRef = useRef()
 
   let refs = [introRef, productsRef, contactRef];
 
@@ -35,18 +37,18 @@ function App() {
           exact
           path="/pogoji"
           render={() => {
-            return <PogojiPoslovanja />;
+            return <PogojiPoslovanja ref={pogojiRef} />;
           }}
         />
-        <Route
+        {/* <Route
           exact
           path="/admin"
           render={() => {
             return <Admin />;
           }}
-        />
+        /> */}
       </Switch>
-      <Footer />
+      <Footer pogojiRef={pogojiRef} />
     </MainContainer>
   );
 }

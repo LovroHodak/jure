@@ -13,10 +13,10 @@ export default forwardRef(function Products(_, ref) {
           return (
             <div key={i}>
               <iframe
-                scrolling="no"
+                /* scrolling="no" */
                 className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
                 src={event.iframeUrl}
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </div>
           );

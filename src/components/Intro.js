@@ -4,7 +4,7 @@ import { tw } from "../tailwind";
 export default forwardRef(function Intro(_, ref) {
   //console.log(ref.current);
   return (
-    <IntroWrapper >
+    <IntroWrapper id='intro'>
       <Title ref={ref}>Smo minimalisti</Title>
       <About>Radi imamo kratke besede. Na primer čin. In gin.</About>
       <About>

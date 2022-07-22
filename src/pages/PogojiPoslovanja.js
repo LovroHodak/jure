@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { tw } from "../tailwind";
 
-export default function PogojiPoslovanja() {
+export default forwardRef (function PogojiPoslovanja(_, ref) {
   return (
-    <div className="bg-white p-10 md:p-20 border-b-4 border-black">
-      <div>
+    <div className="bg-white p-10 md:p-20 border-b-4 border-black" >
+      <div id='pogoji' ref={ref}>
         <Title>Pogoji poslovanja</Title>
         <Text>
           Pogoji poslovanja spletne trgovine so sestavljeni v skladu z Zakonom o
@@ -102,7 +102,7 @@ export default function PogojiPoslovanja() {
       </div>
     </div>
   );
-}
+})
 
 
 const Title = tw.h1`

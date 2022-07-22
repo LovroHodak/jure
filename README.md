@@ -82,3 +82,5 @@ export const tw = new Proxy(
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 9. npm install react-router-dom@5.2.0
+
+10. ($env:HTTPS = "true")
