@@ -4,9 +4,16 @@ import eventsFile from "../content/events.json";
 
 export default forwardRef(function Products(_, ref) {
   console.log(Date.parse(eventsFile.events[0].date));
+  console.log(new Date().setHours(0, 0, 0, 0))
+  console.log(Date.parse(new Date()))
+  
+  
+  console.log(new Date())
   console.log(eventsFile.events.sort((a, b) => {
     return  Date.parse(a.date) - Date.parse(b.date);
   }));
+
+let todaysDate = new Date().setHours(0, 0, 0, 0)
 
   const sortedArr = useMemo(() => {
     eventsFile.events.sort((a, b) => {
@@ -21,23 +28,26 @@ export default forwardRef(function Products(_, ref) {
     return  Date.parse(a.date) - Date.parse(b.date);
   })
 
-  console.log(sorted)
+  console.log(Date.parse(sorted[0].date))
 
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
       <div className="flex flex-wrap justify-evenly" id='dogodki'>
         {sorted.map((event, i) => {
-          return (
-            <div key={i}>
-              <iframe
-                /* scrolling="no" */
-                className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
-                src={event.iframeUrl}
-                frameBorder="0"
-              ></iframe>
-            </div>
-          );
+          if (Date.parse(event.date) > todaysDate) {
+            return (
+              <div key={i}>
+                <iframe
+                  /* scrolling="no" */
+                  className="h-[500px] border-2 rounded-md border-black mx-auto m-2"
+                  src={event.iframeUrl}
+                  frameBorder="0"
+                ></iframe>
+              </div>
+            );
+          }
+          
         })}
       </div>
 
