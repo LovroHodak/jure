@@ -3,7 +3,7 @@ import { tw } from "../tailwind";
 import eventsFile from "../content/events.json";
 
 export default forwardRef(function Products(_, ref) {
-  console.log(Date.parse(eventsFile.events[0].date));
+  /* console.log(Date.parse(eventsFile.events[0].date));
   console.log(new Date().setHours(0, 0, 0, 0))
   console.log(Date.parse(new Date()))
   
@@ -11,29 +11,29 @@ export default forwardRef(function Products(_, ref) {
   console.log(new Date())
   console.log(eventsFile.events.sort((a, b) => {
     return  Date.parse(a.date) - Date.parse(b.date);
-  }));
+  })); */
 
-let todaysDate = new Date().setHours(0, 0, 0, 0)
+  let todaysDate = new Date().setHours(0, 0, 0, 0);
 
   const sortedArr = useMemo(() => {
     eventsFile.events.sort((a, b) => {
-      return  Date.parse(a.date) - Date.parse(b.date);
-    })
-  }, [])
+      return Date.parse(a.date) - Date.parse(b.date);
+    });
+  }, []);
 
-  console.log(sortedArr)
-  console.log(sortedArr)
+  /*   console.log(sortedArr)
+  console.log(sortedArr) */
 
   let sorted = eventsFile.events.sort((a, b) => {
-    return  Date.parse(a.date) - Date.parse(b.date);
-  })
+    return Date.parse(a.date) - Date.parse(b.date);
+  });
 
-  console.log(Date.parse(sorted[0].date))
+  /*  console.log(Date.parse(sorted[0].date)) */
 
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
-      <div className="flex flex-wrap justify-evenly" id='dogodki'>
+      <div className="flex flex-wrap justify-evenly" id="dogodki">
         {sorted.map((event, i) => {
           if (Date.parse(event.date) > todaysDate) {
             return (
@@ -47,7 +47,6 @@ let todaysDate = new Date().setHours(0, 0, 0, 0)
               </div>
             );
           }
-          
         })}
       </div>
 
