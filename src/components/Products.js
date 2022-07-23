@@ -8,15 +8,26 @@ export default forwardRef(function Products(_, ref) {
     return  Date.parse(a.date) - Date.parse(b.date);
   }));
 
-  
+  const sortedArr = useMemo(() => {
+    eventsFile.events.sort((a, b) => {
+      return  Date.parse(a.date) - Date.parse(b.date);
+    })
+  }, [])
 
-  
+  console.log(sortedArr)
+  console.log(sortedArr)
+
+  let sorted = eventsFile.events.sort((a, b) => {
+    return  Date.parse(a.date) - Date.parse(b.date);
+  })
+
+  console.log(sorted)
 
   return (
     <ProductsWrapper ref={ref}>
       <TitleBig>Prihajajoci dogodki</TitleBig>
       <div className="flex flex-wrap justify-evenly" id='dogodki'>
-        {eventsFile.events.map((event, i) => {
+        {sorted.map((event, i) => {
           return (
             <div key={i}>
               <iframe
