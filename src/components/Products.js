@@ -1,9 +1,16 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, { useMemo, forwardRef, useEffect, useRef, useState } from "react";
 import { tw } from "../tailwind";
 import eventsFile from "../content/events.json";
 
 export default forwardRef(function Products(_, ref) {
-  console.log(eventsFile);
+  console.log(Date.parse(eventsFile.events[0].date));
+  console.log(eventsFile.events.sort((a, b) => {
+    return  Date.parse(a.date) - Date.parse(b.date);
+  }));
+
+  
+
+  
 
   return (
     <ProductsWrapper ref={ref}>
